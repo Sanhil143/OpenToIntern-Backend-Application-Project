@@ -5,7 +5,7 @@ const InternController = require('../controllers/internController')
 
 
 
-router.post("/post/colleges", CollegeController.colleges)
+router.post("/colleges", CollegeController.colleges)
 
 router.post("/interns", InternController.interns)
 

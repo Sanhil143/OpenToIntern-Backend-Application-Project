@@ -101,7 +101,7 @@ const interns = async (req, res) => {
                   collegeId: internData.collegeId,
             }
 
-            res.status(201).send({ status: true, msg: createIntern })
+            res.status(201).send({ status: true, data: createIntern })
       }
       catch (err) {
             return res

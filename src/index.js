@@ -2,14 +2,16 @@ const express = require('express')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 const route = require("./routes/route")
+const multer = require('multer')
 mongoose.set('strictQuery', true)
 const app = express()
 
 app.use(express.json())
+app.use(multer().any())
 
 dotenv.config()
 
-mongoose.connect(process.env.MY_DB_URL)
+mongoose.connect("mongodb+srv://sanhil143:raisahab12345@sanhildb.kk3knyj.mongodb.net/openToIntern")
       .then(() => console.log("My DB is connected"))
       .catch((err) => console.error(err))
 
@@ -24,8 +26,8 @@ app.all("/*",  (req, res) =>  {
 
 
 
-app.listen(process.env.PORT, () => {
-      console.error("Express app running on port " + process.env.PORT);
+app.listen(3001, () => {
+      console.error("Express app running on port " + 3001);
 })
 
 
