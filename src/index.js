@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 const route = require("./routes/route")
-const multer = require('multer')
+const multer = require('multer')  //recieve image
 mongoose.set('strictQuery', true)
 const app = express()
 
