@@ -12,9 +12,7 @@ app.use(multer().any());
 dotenv.config();
 
 mongoose
-  .connect(
-    "mongodb+srv://sanhil143:raisahab12345@sanhildb.kk3knyj.mongodb.net/openToIntern"
-  )
+  .connect(process.env.MY_DB_URL)
   .then(() => console.log("My DB is connected"))
   .catch((err) => console.error(err));
 
